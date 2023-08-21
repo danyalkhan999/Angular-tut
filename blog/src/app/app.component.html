@@ -1,2 +1,31 @@
-<h1>Welcome to the Tutorial</h1>
-<app-login></app-login>
+<h1>Functions in Angular</h1>
+<button (click)="functionClick()">Click Me</button>
+<br />
+<br />
+<input
+    type="text"
+    #box
+    (keyup)="getData(box.value)"
+    placeholder="event keyUp"
+/>
+
+<br />
+<br />
+<input
+    type="text"
+    #box1
+    (keydown)="getData(box1.value)"
+    placeholder="event keyDown"
+/>
+
+<br />
+<br />
+<input
+    type="text"
+    #box2
+    (blur)="getData(box2.value)"
+    placeholder="event blur"
+/>
+<br />
+<br />
+<h1 (mouseover)="getData('mouseOver')">Code One by One</h1>

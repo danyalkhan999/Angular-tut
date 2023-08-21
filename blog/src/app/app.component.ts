@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
     title = ' Angular';
     data = 'Danyal Khan';
-    getData() {
-        return 'I am a function';
+    functionClick() {
+        console.log('Function clicked');
+    }
+    getData(val: string) {
+        console.log(val);
     }
 }
