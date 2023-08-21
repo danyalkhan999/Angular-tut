@@ -1,0 +1,9 @@
+.custom{
+    color: brown;
+    text-decoration: dashed;
+}
+
+.dummy{
+    color: teal;
+    text-transform: capitalize;
+}
