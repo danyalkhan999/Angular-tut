@@ -8,10 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
     title = ' Angular';
     data = 'Danyal Khan';
+    name = '';
     functionClick() {
         console.log('Function clicked');
     }
     getData(val: string) {
-        console.log(val);
+        this.name = val;
+    }
+
+    printName() {
+        console.log(this.name);
     }
 }
