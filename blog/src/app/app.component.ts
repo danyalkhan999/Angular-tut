@@ -7,16 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     title = ' Angular';
-    data = 'Danyal Khan';
-    name = '';
-    functionClick() {
-        console.log('Function clicked');
-    }
-    getData(val: string) {
-        this.name = val;
-    }
-
-    printName() {
-        console.log(this.name);
+    count = 0;
+    counter(type: string) {
+        type === '++' ? this.count++ : this.count--;
     }
 }

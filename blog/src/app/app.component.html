@@ -1,11 +1,5 @@
-<h1>Functions in Angular</h1>
-<input
-    type="text"
-    name="name"
-    #box
-    (input)="getData(box.value)"
-    placeholder="Enter a name"
-/>
+<h1>Counter Example</h1>
 
-<br />
-<button (click)="printName()">Submit</button>
+<button (click)="counter('++')">++</button>
+<span>Count: {{ count }}</span>
+<button (click)="counter('--')">--</button>
