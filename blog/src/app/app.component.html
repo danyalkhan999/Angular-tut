@@ -1,5 +1,15 @@
-<h1 class="heading" style="color: tomato;">
-  {{title}}
+<h1>
+  {{ title }}
 </h1>
 
-<app-login></app-login>
+<!-- interpolation works only with strings and number, whereas property binding works with other data type like boolean -->
+<input
+  type="text"
+  name="user-name"
+  value="{{ name }}"
+  disabled="{{ disable }}"
+/>
+<br />
+<br />
+<input type="text" name="user-name" [value]="name" [disabled]="disable" />
+<button (click)="functionClick()">Click Me <<</button>
