@@ -6,9 +6,7 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-    title = ' Angular';
+    title = 'Guessing Game Angular';
     count = 0;
-    counter(type: string) {
-        type === '++' ? this.count++ : this.count--;
-    }
+    counter(type: string) {}
 }

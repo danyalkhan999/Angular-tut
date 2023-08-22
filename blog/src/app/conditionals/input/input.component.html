@@ -1,0 +1,41 @@
+<table>
+    <tr>
+        <td>
+            <input type="number" placeholder="Enter a number" #input />
+        </td>
+        <td>
+            <h2>Score : {{ score }}</h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <!-- <ng-template *ngIf="win; else tryAgain">
+                <app-win></app-win>
+            </ng-template> -->
+            <app-win *ngIf="win; else tryAgain"></app-win>
+
+            <ng-template #tryAgain>
+                <app-lose></app-lose>
+            </ng-template>
+        </td>
+    </tr>
+    <tr>
+        <div [ngSwitch]="input.value">
+            <h1 *ngSwitchCase="0">You have entered 0</h1>
+            <h1 *ngSwitchCase="1">You have entered 1</h1>
+            <h1 *ngSwitchCase="2">You have entered 2</h1>
+            <h1 *ngSwitchCase="3">You have entered 3</h1>
+            <h1 *ngSwitchCase="4">You have entered 4</h1>
+            <h1 *ngSwitchCase="5">You have entered 5</h1>
+            <h1 *ngSwitchCase="6">You have entered 6</h1>
+            <h1 *ngSwitchCase="7">You have entered 7</h1>
+            <h1 *ngSwitchCase="8">You have entered 8</h1>
+            <h1 *ngSwitchCase="9">You have entered 9</h1>
+            <h1 *ngSwitchDefault>Enter a value</h1>
+        </div>
+    </tr>
+
+    <tr>
+        <td><button (click)="functionClick(input.value)">Check <<</button></td>
+    </tr>
+</table>
