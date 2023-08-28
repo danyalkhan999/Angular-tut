@@ -8,16 +8,9 @@ import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 export class AppComponent {
   title = 'angular-viewChildren';
 
-  fullName: string = '';
+  toggle: boolean = true;
 
-  @ViewChildren('inputEl') inputElements: QueryList<ElementRef>;
-
-  showName() {
-    let name: string = '';
-    this.inputElements.forEach((i) => {
-      name += i.nativeElement.value;
-    });
-    this.fullName = name.trim();
-    console.log(this.fullName);
+  onToggle() {
+    this.toggle = !this.toggle;
   }
 }

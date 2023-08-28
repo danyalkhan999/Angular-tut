@@ -1,10 +1,9 @@
-<h2>Learn ng-template</h2>
+<ng-container *ngIf="toggle; else toggleOff">
+  <p>Toggle is on</p>
+</ng-container>
 
-<ng-template #myTemplate>
-  <h3>This is a template</h3>
-  <p>This is example paragraph.</p>
+<ng-template #toggleOff>
+  <p>Toggle is off</p>
 </ng-template>
 
-<!-- ngTemplate outlet directive -->
-
-<div *ngTemplateOutlet="myTemplate"></div>
+<button (click)="onToggle()">Toggle</button>
